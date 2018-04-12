@@ -1,0 +1,371 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: @family;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+ul li{
+	text-decoration: none;
+	list-style: none;
+}
+body{
+	background: #e5e5e5;
+	min-width: 1280px;
+    overflow: auto;
+}
+.fl(){
+	float:left;
+}
+.fr(){
+	float:right;
+}
+.pr(){
+	position:relative;
+}
+.pa(){
+	position:absolute;
+}
+@f14:14px;
+@family:"Arial";
+.bradius(@radius:8px){
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+.border(){
+    border: 2px solid #bbbbbb;
+}
+.liner-gradient(@top:#dcdcde,@bot:#e8e8ea){
+	background: -webkit-linear-gradient(@top,@bot ); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(@top,@bot); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(@top,@bot); /* Firefox 3.6 - 15 */
+	background: linear-gradient(@top,@bot);
+}
+.flex(@wrap:nowrap,@jcontent:space-between){
+	display: flex;
+	flex-direction: row;
+	flex-wrap: @wrap;
+	justify-content: @jcontent;
+	align-items: stretch;
+}
+@redcolor:#e84c3d;
+@redtc:#ff846a;
+@redbc:#b53a2f;
+@bluecolor:#3598db;
+@bluetc:#48cdff;
+@bluebc:#2873a6;
+@tcolor:#e1e4e5;
+@mcolor:#f1f4f5;
+@green:#007b17;
+.linet(){
+	border-top:1px solid #fff;
+	border-bottom: 1px solid #d0d0d0;
+}
+.box-show(){
+	-moz-box-shadow:0px 1px 2px 2px #fff inset;               
+	-webkit-box-shadow:0px 1px 2px 2px #fff inset;
+	box-shadow:0px 1px 2px 2px #fff inset;  
+}
+.red-but(@color:#e84c3d,@tc:#ff846a,@bc:#b53a2f){
+	background: @color;
+	.bradius();
+	border-top:1px solid @tc;
+	border-bottom:3px solid @bc;
+	box-shadow: 0 2px 2px #cccdce;
+}
+.blue-but(){
+	background: @bluecolor;
+	.bradius();
+	border-top:1px solid @bluetc;
+	border-bottom:3px solid @bluebc;
+	box-shadow: 0 2px 2px #cccdce;
+}
+.red-pro(){
+	border-radius: 6px 0 0 6px;
+	border-top:1px solid @redtc;
+	background: @redcolor;
+	display: block;
+}
+.blue-pro(){
+	border-radius: 0 6px 6px 0;
+	border-top:1px solid @bluetc;
+	display: block;
+	background: @bluecolor;
+}
+.list(){
+	.pr();
+	.bradius();
+	padding-top: 10px;
+	margin-top: 10px;
+	overflow: hidden;
+	border-bottom: 2px solid #e0e3e3;
+	&:before{
+			width: 100%;
+			content: "";
+			.pa();
+			top: 0;
+			height: 10px;
+			background: #2784d2;
+			border-radius: 6px 6px 0 0;
+			border-top:1px solid #43bfff;
+			border-bottom: 1px solid #0963b5;
+		}
+	
+}
+.witebar(){
+	box-shadow: 0px 0px 10px #0000003b;
+	background: #fff;
+	overflow: hidden;
+	width: 100%;
+}
+#app{
+   max-width: 1260px;
+   margin: 0 auto;
+   background: url(../images/banner.jpg) no-repeat #e5e5e5;
+   min-height: 980px;
+   background-size: contain;
+   background-position: 0 51px;
+}
+header{
+	width: 100%;
+	min-height: 435px;	
+}
+nav{
+	overflow: hidden;
+	height: 51px;
+	background: #fff;
+}
+.nav-left{
+	width: 50%;
+	.fl();
+	margin-left:27px;
+	li{
+		margin-right:5%;
+	}
+}
+
+.nav-right{
+	.fr();
+	width: 20%;
+	margin-right: 27px;
+	li{
+		margin-left: 12.5%;
+		.fr();
+	}
+}
+
+nav li{
+	display: inline-block;
+	font-size: @f14;
+	line-height: 51px;
+	a{
+		color:#0662a9;
+	}
+}
+
+.tab-list ul{
+	.flex();
+}
+
+.tab-list li{
+	width: 24.85%;
+	height: 42px;
+	cursor: pointer;	
+	a{
+		background: #7e7e7e;
+		border-radius: 10px 10px 0 0;
+		text-align: center;
+		line-height: 42px;
+		font-size: 16px;
+		color: #d9d9d9;
+		font-weight: bold;
+        display: block;
+        .pr();
+		&::before{
+			.pa();
+			content: "";
+			width: 44px;
+			height: 47px;
+            background: url(../images/ball_gray.png) no-repeat center;
+            background-size: 100%;
+			left: 14px;
+			top: -50%;
+
+			
+		}
+	}
+	.router-link-active{
+		background: #e5e5e5;
+		color: #3a3a3c;
+		.pr();
+		&::before{
+			.pa();
+			content: "";
+			width: 44px;
+			height: 47px;
+            background: url(../images/ball.png) no-repeat center;
+            background-size: 44px 47px;
+			left: 14px;
+			top: -50%;
+
+			
+		}
+	}
+}
+.modle-overlay{
+	position: fixed;
+    z-index: 10;
+    background: #000000a8;
+    width: 100%;
+    height: 100%;
+    left: 0;
+	top: 0;
+	display: none;
+	
+}
+.popup{
+	    z-index: 12;
+	    display: none;
+		.pa();
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 504px;
+		height: 506px;
+		.bradius();
+		background: #f1f4f5;
+		overflow:  hidden;
+		h2{
+			font-size: 14px;
+			color: #676767;
+			text-align: center;
+		}
+		h3{
+			color: #ff0013;
+			font-size: 16px;
+		}
+		p{
+			color: #662424;
+		}
+		&-top{
+			height: 109px;
+			padding: 25px;
+			border-bottom: 1px solid #d0d0d0;
+			background: url(../images/ball.png) no-repeat 20px #fff;
+			span{
+				color: #0662a9;
+				font-size: 18px;
+				text-align: center;
+				display: inherit;
+				line-height: 28px;
+			}
+			.p-close{
+				position: absolute;
+				right: 20px;
+				top: 10px;
+				font-weight: bold;
+				font-family: arial;
+				font-size: 26px;
+				color: #ccc;
+				text-shadow: 0 1px #fff;
+				cursor: pointer;
+				&:hover{
+				color:#aaa;
+				}
+			}
+			
+		}
+		&-mid{
+			border-top: 1px solid #fff;
+			background: #e1e4e5;
+			height: 257px;
+			padding: 20px 0;
+			border-bottom: 1px solid #d0d0d0;
+			ul{
+				.flex(wrap);
+				padding: 10px 50px;
+			}
+			li{
+				width: 119px;
+				height: 37px;
+				border: 2px solid #868686;
+				margin-bottom: 9px;
+				.bradius(8px);
+				.box-show();  
+				.liner-gradient();
+				color: #3a3a3c;
+				text-align: center;
+				line-height: 35px;
+				font-weight: bold;
+				cursor: pointer;
+				&.active{
+					color: #007b17;
+					.liner-gradient(@top:#ebebeb,@bot:#ffffff);
+				}
+				input{
+					width: 100px;
+					height: 24px;
+					line-height: 24px;
+					background: none;
+					outline: none;
+					border: none;
+					font-size: 18px;
+					color: #3a3a3c;
+					text-align: center;
+				}
+			}
+			p{
+				font-size: 13px;
+				text-align: center;
+				padding: 10px 50px;
+				color: #676767;
+
+			}
+			span{
+				font-size: 14px;
+				font-weight: bold;
+				color: #ff5400;
+				text-align: center;
+				display: inherit;
+			}
+		}
+		&-bot{
+
+			border-top: 1px solid #fff;
+			.bet{
+				text-align: center;
+				color: #676767;
+				margin-top: 20px;
+				font-weight: bold;
+				span{
+					color: #007b17;
+					margin-left: 40px;
+				}
+			}
+			.payment{
+				input{
+					.blue-but();
+					width:180px;
+					height:52px;
+					margin:20px auto;
+					display:block;
+					color:#fff;
+					text-align:center;
+					line-height:50px;
+					font-weight:bold;
+					box-shadow: 0 2px 4px #00000045;
+					font-size: 16px;
+				}
+			}
+	    }
+	   
+	}
+	.show {
+		display: block;
+	}
+	  .hide {
+		display: none;
+	}
