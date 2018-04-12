@@ -14,18 +14,18 @@
                 </li>        
             </ul>
         </section>
-        <com-before v-if="componentName === 'national'"></com-before> 
-        <!-- <com-pvp v-if="componentName === 'pvp'"></com-pvp> -->
+        <com-nation v-if="componentName === 'national'"></com-nation> 
+        <com-golden v-if="componentName === 'golden'"></com-golden>
     </div>
 </template>
 <script>
 import national from '@/components/National'
-// import pvp from '@/components/pvp'
+import golden from '@/components/Golden'
 
 export default {
     components: {
-        'com-before': national,
-        // 'com-pvp': pvp
+        'com-nation': national,
+        'com-golden': golden
     },
    
     data() {
@@ -34,8 +34,8 @@ export default {
             tabIndex: 0,
             tabLists:[
                 {id:1,text:'National Team',name:'national', endTime:'2018-04-18 16:02'},
-                {id:0,text:'Guessing Competition',name:'pvp', endTime : '2018-04-31 16:02'},
-                {id:2,text:'The Goldeb Boot',name:'group', endTime : '2018-05-31 16:02'},
+                {id:0,text:'Guessing Competition',name:'competition', endTime : '2018-04-31 16:02'},
+                {id:2,text:'The Goldeb Boot',name:'golden', endTime : '2018-05-31 16:02'},
                 {id:3,text:'2020 Qatar World Cup',name:'knockout', endTime : '2018-06-31 16:02'},
              
             ]

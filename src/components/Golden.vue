@@ -1,5 +1,5 @@
 <template>
-    <div class="national">
+    <div class="golden">
         <div class="pepole">
             <ul>
                 <li date-numeber="">Cristiano Ronaldo</li>
@@ -12,16 +12,12 @@
         </div>
         <div class="local">
             <ul>
-                <li 
-                    v-for="(item, index) in localLists" v-bind:key="item.index"
-                    :class="{
-                        active:isactive
-                    }" 
-                    @click="isactive=!isactive"
-                >
-                     {{ item.text }}
-                </li>
-                
+                <li class="active">All</li>
+                <li>Europe</li>
+                <li>S.America</li>
+                <li>N,America</li>
+                <li>Africa</li>
+                <li>Asia</li>
             </ul>
         </div>
         <div class="choose">
@@ -47,7 +43,7 @@
             </div>
         </div>
         
-        <div class="nation-list">
+        <div class="golden-list">
             <ul>
                 <li>
                     <div class="top">
@@ -101,20 +97,6 @@
     import '@/less/national.less'
 
     export default {
-        name: "national",
-        data() {
-            return {
-                isactive:true,
-                localLists:[
-                    {text:'All',name:'all'},
-                    {text:'Europe',name:'europe'},
-                    {text:'S.America',name:'sa'},
-                    {text:'N,America',name:'na'},
-                    {text:'Africa',name:'africa'},
-                    {text:'Asia',name:'asia'}
-                    
-                ]
-            }
-        }
+        name: "golden"
     }
 </script>

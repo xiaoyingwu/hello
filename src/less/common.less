@@ -1,8 +1,18 @@
 *{
 	padding: 0;
 	margin: 0;
+	// font: 14px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
 	font-family: @family;
 	box-sizing: border-box;
+}
+input,button{ margin:0; padding:0; list-style-type:none;}
+button{
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	outline: none;
+	cursor: pointer;
 }
 a{
 	text-decoration: none;
@@ -38,7 +48,7 @@ body{
 .border(){
     border: 2px solid #bbbbbb;
 }
-.liner-gradient(@top:#dcdcde,@bot:#e8e8ea){
+.liner-gradient(@top:#ebebeb,@bot:#ffffff){
 	background: -webkit-linear-gradient(@top,@bot ); /* Safari 5.1 - 6.0 */
 	background: -o-linear-gradient(@top,@bot); /* Opera 11.1 - 12.0 */
 	background: -moz-linear-gradient(@top,@bot); /* Firefox 3.6 - 15 */
@@ -65,9 +75,9 @@ body{
 	border-bottom: 1px solid #d0d0d0;
 }
 .box-show(){
-	-moz-box-shadow:0px 1px 2px 2px #fff inset;               
-	-webkit-box-shadow:0px 1px 2px 2px #fff inset;
-	box-shadow:0px 1px 2px 2px #fff inset;  
+	-moz-box-shadow:0px 2px 2px #fff inset;               
+	-webkit-box-shadow:0px 2px 2px #fff inset;
+	box-shadow:0px 2px 2px #fff inset;  
 }
 .red-but(@color:#e84c3d,@tc:#ff846a,@bc:#b53a2f){
 	background: @color;
@@ -97,23 +107,11 @@ body{
 }
 .list(){
 	.pr();
-	.bradius();
-	padding-top: 10px;
-	margin-top: 10px;
+	.bradius(6px);
+	margin-top: 15px;
 	overflow: hidden;
-	border-bottom: 2px solid #e0e3e3;
-	&:before{
-			width: 100%;
-			content: "";
-			.pa();
-			top: 0;
-			height: 10px;
-			background: #2784d2;
-			border-radius: 6px 6px 0 0;
-			border-top:1px solid #43bfff;
-			border-bottom: 1px solid #0963b5;
-		}
-	
+	box-shadow: 0px 0px 10px #0000003b;
+	background: url(../images/cardbg.png) no-repeat top center #fff
 }
 .witebar(){
 	box-shadow: 0px 0px 10px #0000003b;
