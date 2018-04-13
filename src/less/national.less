@@ -3,9 +3,32 @@
 .national,.golden{
     background: #e5e5e5;
 }
+.bonus{
+    height: 68px;
+    min-width: 116px;
+    background: url(../images/flower.png) repeat;
+    position: fixed;
+    letter-spacing:50px;
+    line-height: 68px;
+    top: 365px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &:nth-child(0) span{
+        font-size: 40px;
+        color: #fff;
+        font-weight: bolder;
+        text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;  
+    }
+   
+    &:nth-child(1) span{
+        font-size: 20px;
+        letter-spacing:normal;
+        line-height: 32px;
+    }
+}
 .pepole {
     ul{
-        .flex(@wrap:wrap);
+        .flex(wrap);
         width: 100%;
         padding-top: 59px;
     }
@@ -33,7 +56,7 @@
             font-size: 18px;
             font-weight: bold;
         }
-        &:nth-child(1),&:nth-child(3){
+        &:nth-child(2),&:nth-child(3){
             height: 49px;
             font-size: 16px;
             color: #3a3a3c;
@@ -47,13 +70,14 @@
                 font-size: 30px;
             }
         }
-        &:nth-child(2){
+        &:nth-child(1){
             height: 59px;
             margin-top:-10px;
             font-size: 20px;
             color: #3a3a3c;
             font-weight: bold;
             line-height: 55px;
+            align-self: center;
             &:before{
                 width: 51px;
                 height: 51px;
@@ -61,30 +85,38 @@
                 font-size: 40px;
                 content: "1";
             }
+            order: 1;
+        }
+        &:nth-child(2){
+            order: 0;
         }
         &:nth-child(3){
             &::before{
                 content: "3";
                 background: #096aad;
             }
+            order: 2;
         }
         &:nth-child(4){
             &::before{
                 content: "4";
                 background: #066a2c;
             }
+            order: 3;
         }
         &:nth-child(5){
             &::before{
                 content: "5";
                 background: #9e4f09;
             }
+            order: 4;
         }
         &:nth-child(6){
             &::before{
                 content: "6";
                 background: #a2577a;
             }
+            order: 5;
         }
         
     }
@@ -95,14 +127,15 @@
     margin-top: 44px;
     margin-bottom: 10px;
     li{
-        padding: 10px 40px;
+        padding: 8px 40px;
         .bradius(10px);
         .border();
         display: inline-block;
         font-size: 14px;
         cursor: pointer;
+        margin-right: 5px;
         &:nth-child(1){
-            padding: 10px 25px;
+            padding: 8px 25px;
         }
         &.active{
             color: #ff0000;
@@ -209,7 +242,8 @@
     li{
         background: #9700c2;
         .bradius();
-        height: 26px;
+        .border();
+        height: 30px;
         font-size: 13.5px;
         padding: 0 25px 0 5px;
         line-height: 26px;
@@ -228,8 +262,12 @@
         color: #fff; 
         right: 5px;
         top: 0;
-        font-size: 20px;
+        font-size: 24px;
         cursor: pointer;
+        &:hover{
+            opacity: 0.8;
+            
+        }
     }
 }
 .sort{

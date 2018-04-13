@@ -1,0 +1,290 @@
+[
+    {
+        "teamID": "1",
+        "teamName": "Russia",
+        "teamNameCN": "\u4fc4\u7f57\u65af",
+        "groupID": "1",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "2",
+        "teamName": "Uruguay",
+        "teamNameCN": "\u4e4c\u62c9\u572d",
+        "groupID": "1",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "3",
+        "teamName": "Egypt",
+        "teamNameCN": "\u57c3\u53ca",
+        "groupID": "1",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "4",
+        "teamName": "Saudi Arabia",
+        "teamNameCN": "\u6c99\u7279\u963f\u62c9\u4f2f",
+        "groupID": "1",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "5",
+        "teamName": "Portugal",
+        "teamNameCN": "\u8461\u8404\u7259",
+        "groupID": "2",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "6",
+        "teamName": "Spain",
+        "teamNameCN": "\u897f\u73ed\u7259",
+        "groupID": "2",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "7",
+        "teamName": "Iran",
+        "teamNameCN": "\u4f0a\u6717",
+        "groupID": "2",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "8",
+        "teamName": "Morocco",
+        "teamNameCN": "\u6469\u6d1b\u54e5",
+        "groupID": "2",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "9",
+        "teamName": "France",
+        "teamNameCN": "\u6cd5\u56fd",
+        "groupID": "3",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "10",
+        "teamName": "Peru",
+        "teamNameCN": "\u79d8\u9c81",
+        "groupID": "3",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "11",
+        "teamName": "Danmark",
+        "teamNameCN": "\u4e39\u9ea6",
+        "groupID": "3",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "12",
+        "teamName": "Australia",
+        "teamNameCN": "\u6fb3\u5927\u5229\u4e9a",
+        "groupID": "3",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "13",
+        "teamName": "Argentina",
+        "teamNameCN": "\u963f\u6839\u5ef7",
+        "groupID": "4",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "14",
+        "teamName": "Croatia",
+        "teamNameCN": "\u514b\u7f57\u5730\u4e9a",
+        "groupID": "4",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "15",
+        "teamName": "Iceland",
+        "teamNameCN": "\u51b0\u5c9b",
+        "groupID": "4",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "16",
+        "teamName": "Nigeria",
+        "teamNameCN": "\u5c3c\u65e5\u5229\u4e9a",
+        "groupID": "4",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "17",
+        "teamName": "Brasil",
+        "teamNameCN": "\u5df4\u897f",
+        "groupID": "5",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "18",
+        "teamName": "Switzerland",
+        "teamNameCN": "\u745e\u58eb",
+        "groupID": "5",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "19",
+        "teamName": "Costa Rica",
+        "teamNameCN": "\u54e5\u65af\u8fbe\u9ece\u52a0",
+        "groupID": "5",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "20",
+        "teamName": "Serbia",
+        "teamNameCN": "\u585e\u5c14\u7ef4\u4e9a",
+        "groupID": "5",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "21",
+        "teamName": "Germany",
+        "teamNameCN": "\u5fb7\u56fd",
+        "groupID": "6",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "22",
+        "teamName": "Mexico",
+        "teamNameCN": "\u58a8\u897f\u54e5",
+        "groupID": "6",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "23",
+        "teamName": "Sweden",
+        "teamNameCN": "\u745e\u5178",
+        "groupID": "6",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "24",
+        "teamName": "South Korea",
+        "teamNameCN": "\u97e9\u56fd",
+        "groupID": "6",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "25",
+        "teamName": "Belgium",
+        "teamNameCN": "\u6bd4\u5229\u65f6",
+        "groupID": "7",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "26",
+        "teamName": "England",
+        "teamNameCN": "\u82f1\u683c\u5170",
+        "groupID": "7",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "27",
+        "teamName": "Tunisia",
+        "teamNameCN": "\u7a81\u5c3c\u65af",
+        "groupID": "7",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "28",
+        "teamName": "Panama",
+        "teamNameCN": "\u5df4\u62ff\u9a6c",
+        "groupID": "7",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "29",
+        "teamName": "Poland",
+        "teamNameCN": "\u6ce2\u5170",
+        "groupID": "8",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "30",
+        "teamName": "Colombia",
+        "teamNameCN": "\u54e5\u4f26\u6bd4\u4e9a",
+        "groupID": "8",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "31",
+        "teamName": "Senegal",
+        "teamNameCN": "\u585e\u5185\u52a0\u5c14",
+        "groupID": "8",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    },
+    {
+        "teamID": "32",
+        "teamName": "Japan",
+        "teamNameCN": "\u65e5\u672c",
+        "groupID": "8",
+        "groupScore": "0",
+        "currLevel": "1",
+        "isOut": "0"
+    }
+]

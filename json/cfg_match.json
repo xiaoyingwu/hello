@@ -1,0 +1,482 @@
+[
+    {
+        "matchID": "1",
+        "level": "1",
+        "team1": "1",
+        "team2": "4",
+        "startTime": "1528988400",
+        "goals1": "4",
+        "goals2": "2",
+        "isComplete": "1"
+    },
+    {
+        "matchID": "2",
+        "level": "1",
+        "team1": "3",
+        "team2": "2",
+        "startTime": "1529064000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "3",
+        "level": "1",
+        "team1": "8",
+        "team2": "7",
+        "startTime": "1529074800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "4",
+        "level": "1",
+        "team1": "5",
+        "team2": "6",
+        "startTime": "1529085600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "5",
+        "level": "1",
+        "team1": "9",
+        "team2": "12",
+        "startTime": "1529143200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "6",
+        "level": "1",
+        "team1": "10",
+        "team2": "11",
+        "startTime": "1529154000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "7",
+        "level": "1",
+        "team1": "13",
+        "team2": "15",
+        "startTime": "1529164800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "8",
+        "level": "1",
+        "team1": "14",
+        "team2": "16",
+        "startTime": "1529175600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "9",
+        "level": "1",
+        "team1": "17",
+        "team2": "18",
+        "startTime": "1529229600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "10",
+        "level": "1",
+        "team1": "19",
+        "team2": "20",
+        "startTime": "1529240400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "11",
+        "level": "1",
+        "team1": "21",
+        "team2": "22",
+        "startTime": "1529251200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "12",
+        "level": "1",
+        "team1": "23",
+        "team2": "24",
+        "startTime": "1529323200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "13",
+        "level": "1",
+        "team1": "25",
+        "team2": "28",
+        "startTime": "1529334000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "14",
+        "level": "1",
+        "team1": "27",
+        "team2": "26",
+        "startTime": "1529344800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "15",
+        "level": "1",
+        "team1": "29",
+        "team2": "31",
+        "startTime": "1529409600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "16",
+        "level": "1",
+        "team1": "30",
+        "team2": "32",
+        "startTime": "1529420400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "17",
+        "level": "1",
+        "team1": "1",
+        "team2": "3",
+        "startTime": "1529431200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "18",
+        "level": "1",
+        "team1": "2",
+        "team2": "4",
+        "startTime": "1529496000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "19",
+        "level": "1",
+        "team1": "5",
+        "team2": "8",
+        "startTime": "1529506800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "20",
+        "level": "1",
+        "team1": "7",
+        "team2": "6",
+        "startTime": "1529517600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "21",
+        "level": "1",
+        "team1": "9",
+        "team2": "10",
+        "startTime": "1529582400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "22",
+        "level": "1",
+        "team1": "11",
+        "team2": "12",
+        "startTime": "1529593200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "23",
+        "level": "1",
+        "team1": "13",
+        "team2": "14",
+        "startTime": "1529604000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "24",
+        "level": "1",
+        "team1": "16",
+        "team2": "15",
+        "startTime": "1529668800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "25",
+        "level": "1",
+        "team1": "17",
+        "team2": "19",
+        "startTime": "1529679600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "26",
+        "level": "1",
+        "team1": "20",
+        "team2": "18",
+        "startTime": "1529690400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "27",
+        "level": "1",
+        "team1": "21",
+        "team2": "23",
+        "startTime": "1529755200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "28",
+        "level": "1",
+        "team1": "24",
+        "team2": "22",
+        "startTime": "1529766000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "29",
+        "level": "1",
+        "team1": "25",
+        "team2": "27",
+        "startTime": "1529776800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "30",
+        "level": "1",
+        "team1": "26",
+        "team2": "28",
+        "startTime": "1529841600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "31",
+        "level": "1",
+        "team1": "29",
+        "team2": "30",
+        "startTime": "1529852400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "32",
+        "level": "1",
+        "team1": "32",
+        "team2": "31",
+        "startTime": "1529863200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "33",
+        "level": "1",
+        "team1": "2",
+        "team2": "1",
+        "startTime": "1529935200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "34",
+        "level": "1",
+        "team1": "4",
+        "team2": "3",
+        "startTime": "1529935200",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "35",
+        "level": "1",
+        "team1": "7",
+        "team2": "5",
+        "startTime": "1529949600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "36",
+        "level": "1",
+        "team1": "6",
+        "team2": "8",
+        "startTime": "1529949600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "37",
+        "level": "1",
+        "team1": "11",
+        "team2": "9",
+        "startTime": "1530021600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "38",
+        "level": "1",
+        "team1": "12",
+        "team2": "10",
+        "startTime": "1530021600",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "39",
+        "level": "1",
+        "team1": "16",
+        "team2": "13",
+        "startTime": "1530036000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "40",
+        "level": "1",
+        "team1": "15",
+        "team2": "14",
+        "startTime": "1530036000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "41",
+        "level": "1",
+        "team1": "20",
+        "team2": "17",
+        "startTime": "1530108000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "42",
+        "level": "1",
+        "team1": "18",
+        "team2": "19",
+        "startTime": "1530108000",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "43",
+        "level": "1",
+        "team1": "24",
+        "team2": "21",
+        "startTime": "1532714400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "44",
+        "level": "1",
+        "team1": "22",
+        "team2": "23",
+        "startTime": "1530122400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "45",
+        "level": "1",
+        "team1": "26",
+        "team2": "25",
+        "startTime": "1530194400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "46",
+        "level": "1",
+        "team1": "28",
+        "team2": "27",
+        "startTime": "1530194400",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "47",
+        "level": "1",
+        "team1": "32",
+        "team2": "29",
+        "startTime": "1530208800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    },
+    {
+        "matchID": "48",
+        "level": "1",
+        "team1": "31",
+        "team2": "30",
+        "startTime": "1530208800",
+        "goals1": "0",
+        "goals2": "0",
+        "isComplete": "0"
+    }
+]

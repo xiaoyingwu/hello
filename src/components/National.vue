@@ -1,13 +1,14 @@
 <template>
     <div class="national">
+        <div class="bonus"><span>{{bonus}}</span><span>ETH</span></div>
         <div class="pepole">
             <ul>
-                <li date-numeber="">Cristiano Ronaldo</li>
-                <li>Cristiano Ronaldo</li>
-                <li>Cristiano Ronaldo</li>
-                <li>Cristiano Ronaldo</li>
-                <li>Cristiano Ronaldo</li>
-                <li>Cristiano Ronaldo</li>
+                <li>Cristiano Ronaldo1</li>
+                <li>Cristiano Ronaldo2</li>
+                <li>Cristiano Ronaldo3</li>
+                <li>Cristiano Ronaldo4</li>
+                <li>Cristiano Ronaldo5</li>
+                <li>Cristiano Ronaldo6</li>
             </ul>
         </div>
         <div class="local">
@@ -15,9 +16,9 @@
                 <li 
                     v-for="(item, index) in localLists" v-bind:key="item.index"
                     :class="{
-                        active:isactive
+                        'active':index === tabIndex
                     }" 
-                    @click="isactive=!isactive"
+                    @click="changeActive(index)"
                 >
                      {{ item.text }}
                 </li>
@@ -99,12 +100,15 @@
 
 <script>
     import '@/less/national.less'
+    import axios from 'axios'
 
     export default {
         name: "national",
         data() {
             return {
-                isactive:true,
+                isactive:false,
+                tabIndex:0,
+                bonus:2,
                 localLists:[
                     {text:'All',name:'all'},
                     {text:'Europe',name:'europe'},
@@ -113,7 +117,31 @@
                     {text:'Africa',name:'africa'},
                     {text:'Asia',name:'asia'}
                     
-                ]
+                ],
+                personLists:[
+                    {name:'Cristiano Ronaldo1',color:'#ff0000'},
+                    {name:'Cristiano Ronaldo2',color:'#ff0000'},
+                    {name:'Cristiano Ronaldo3',color:'#ff0000'},
+                    {name:'Cristiano Ronaldo4',color:'#ff0000'},
+                    {name:'Cristiano Ronaldo5',color:'#ff0000'},
+                    {name:'Cristiano Ronaldo6',color:'#ff0000'}
+                ],
+                teamLists:[]
+            }
+        },
+        mounted(){
+            var _this = this;
+            axios.get('http://10.10.1.149:8124/index?action=TBP')
+            .then(function (response) {
+                 _this.bonus = response.data.data;
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+        },
+        methods: {
+            changeActive(index){
+                this.tabIndex = index;
             }
         }
     }
