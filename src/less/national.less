@@ -1,29 +1,51 @@
 @import "common.less";
-
+.content{
+    .pr();
+}
+.nation-header{
+    background: url(../images/banner.jpg) no-repeat #e5e5e5;
+    height: 435px;
+}
+.tab-list{
+    .pa();
+    top: 388px;
+    z-index: 22;
+    width: 100%;
+}
 .national,.golden{
     background: #e5e5e5;
 }
 .bonus{
-    height: 68px;
-    min-width: 116px;
-    background: url(../images/flower.png) repeat;
-    position: fixed;
-    letter-spacing:50px;
-    line-height: 68px;
-    top: 365px;
+    height: 60px;       
+    line-height: 60px;
+    .pa();
+    top: 315px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    &:nth-child(0) span{
-        font-size: 40px;
+    transform: translate(-50%, -50%);  
+    overflow: hidden;
+    span{
+        .fl();
+        text-shadow:#934200 2px 0 0,#934200 0 2px 0,#934200 -2px 0 0,#934200 0 -2px 0;  
         color: #fff;
-        font-weight: bolder;
-        text-shadow:#000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;  
+        display: block;
+        height: 60px;
+        min-width: 58px;
+  
     }
-   
-    &:nth-child(1) span{
+    span:nth-child(1) {
+        font-size: 40px;
+        background: url(../images/flower.png) repeat;
+        font-weight: bolder;
+        letter-spacing:36px;
+        display: block;
+        padding-left: 18px;
+        // width: 58px;
+    }  
+    span:nth-child(2) {
         font-size: 20px;
         letter-spacing:normal;
-        line-height: 32px;
+        background: url(../images/flower.png) repeat;
+        text-align: center;
     }
 }
 .pepole {

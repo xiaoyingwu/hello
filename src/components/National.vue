@@ -1,6 +1,10 @@
 <template>
     <div class="national">
-        <div class="bonus"><span>{{bonus}}</span><span>ETH</span></div>
+        <div class="nation-header">
+            <div class="bonus">
+                <span :style="'width:'+58*num +'px;'">{{bonus}}</span><span>ETH</span>
+            </div>
+        </div>        
         <div class="pepole">
             <ul>
                 <li>Cristiano Ronaldo1</li>
@@ -47,68 +51,28 @@
                 <em></em>
             </div>
         </div>
+        <nation-list></nation-list>
         
-        <div class="nation-list">
-            <ul>
-                <li>
-                    <div class="top">
-                        <div class="country-icon">
-                            <img src="@/images/icon1.png">
-                        </div>
-                        <div class="country-pic">
-                            <img src="@/images/pic1.png">
-                        </div>
-                        <p>Russia</p>
-                        <span>Owner:Crisriano Ronaldo</span>
-                    </div>
-                    <div class="mid">
-                        <div class="card-left">
-                            <span>
-                                Continent
-                                <p>Europe</p>
-                            </span>
-                            <span>
-                                Ball-game star
-                                <p>Alan Dzagoev</p>
-                            </span>
-                        </div>                   
-                        <div class="card-right">
-                            <span>
-                                World Rank
-                                <p>No.20</p>
-                            </span>
-                            <span>
-                                Best achievement
-                                <p>Eight</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="bot">
-                        <span>800.62577 Eth</span>
-                        <button class="buy-bot">BUY</button>
-                    </div>
-                </li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
     </div>
 </template>
 
 
 <script>
+    import nationlist from '@/components/NationList'
     import '@/less/national.less'
     import axios from 'axios'
 
     export default {
+        components: {
+        'nation-list': nationlist,
+        
+    },
         name: "national",
         data() {
             return {
                 isactive:false,
                 tabIndex:0,
-                bonus:2,
+                bonus:'6,666.66',
                 localLists:[
                     {text:'All',name:'all'},
                     {text:'Europe',name:'europe'},
@@ -126,18 +90,26 @@
                     {name:'Cristiano Ronaldo5',color:'#ff0000'},
                     {name:'Cristiano Ronaldo6',color:'#ff0000'}
                 ],
-                teamLists:[]
+                teamLists:[],
+                num: 1
             }
         },
         mounted(){
-            var _this = this;
-            axios.get('http://10.10.1.149:8124/index?action=TBP')
-            .then(function (response) {
-                 _this.bonus = response.data.data;
+                     
+            axios.get('http://10.10.1.149:8124/index', {
+                params:{
+                    action: 'TBP'
+                }
             })
-            .catch(function (error) {
-                console.log(error);
-            });
+            .then(response => {
+                 this.bonus = response.data.data;
+                 this.num=this.bonus.length;
+         
+            }, response => {
+                     console.log('数据加载失败')
+            }
+            )
+           
         },
         methods: {
             changeActive(index){
