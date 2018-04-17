@@ -33,15 +33,28 @@ export default {
             componentName: '',
             tabIndex: 0,
             tabLists:[
-                {id:1,text:'National Team',name:'national'},
-                {id:0,text:'Guessing Competition',name:'competition'},
-                {id:2,text:'The Goldeb Boot',name:'golden'},
-                {id:3,text:'2020 Qatar World Cup',name:'knockout'},             
+                {id:1,text:'National Team',name:'national', endTime:'2018-04-18 16:02'},
+                {id:0,text:'Guessing Competition',name:'competition', endTime : '2018-04-31 16:02'},
+                {id:2,text:'The Goldeb Boot',name:'golden', endTime : '2018-05-31 16:02'},
+                {id:3,text:'2020 Qatar World Cup',name:'knockout', endTime : '2018-06-31 16:02'},
+             
             ]
         }
     },
+    // created() {
+    //     const { tabLists, time } = this;
+    //     const nowTime = new Date();
+    //     const futureTabList = tabLists.filter((list) => {
+    //         return new Date(list.endTime) > nowTime
+    //     })
+    //     const outTimeList = tabLists.filter((list) => {
+    //         return new Date(list.endTime) <= nowTime
+    //     })
+    //     this.tabLists = [...futureTabList, ...outTimeList]
+    // },
     mounted() {
-        this.changeVisible();     
+        this.changeVisible();
+      
     },
     methods: {
         changeTab (index, e) {
@@ -51,7 +64,10 @@ export default {
         },
         changeVisible (index = 0) {
             this.componentName = this.tabLists[index].name;
-        },        
+        },
+       
+        
     },
+
 }
 </script>

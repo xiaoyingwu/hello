@@ -64,9 +64,11 @@
 
     export default {
         components: {
-        'nation-list': nationlist,
-        
-    },
+        'nation-list': nationlist,        
+        },
+        computed:{
+
+        },
         name: "national",
         data() {
             return {
@@ -81,14 +83,6 @@
                     {text:'Africa',name:'africa'},
                     {text:'Asia',name:'asia'}
                     
-                ],
-                personLists:[
-                    {name:'Cristiano Ronaldo1',color:'#ff0000'},
-                    {name:'Cristiano Ronaldo2',color:'#ff0000'},
-                    {name:'Cristiano Ronaldo3',color:'#ff0000'},
-                    {name:'Cristiano Ronaldo4',color:'#ff0000'},
-                    {name:'Cristiano Ronaldo5',color:'#ff0000'},
-                    {name:'Cristiano Ronaldo6',color:'#ff0000'}
                 ],
                 teamLists:[],
                 num: 1
