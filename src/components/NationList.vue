@@ -75,7 +75,7 @@ export default {
         })
         .then(function (response) {           
             _this.teamlists = response.data.data;
-            for(var i=0; i< team_data.length;i++){
+            for(let i=0; i< team_data.length;i++){
                 Object.assign(_this.teamlists[i],team_data[i]);     
             }          
         }) 
