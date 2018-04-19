@@ -1,10 +1,11 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import Vuex from 'vuex';
 import router from './router/index'
 import axios from 'axios'
+import mask from './app.js'
 import './less/common.less'
 import team_data from '@/../static/json/team.json'
 
@@ -63,6 +64,7 @@ function getFilterArray (array) {
 
 
 const store = new Vuex.Store({
+  strict: false,
   state:{
     teamList:[]
    
@@ -79,8 +81,11 @@ const store = new Vuex.Store({
       //   rnick[item.nick]=item.price;
       //   return rnick;
       // })
+    
+     
       
       return getFilterArray (owners);
+     
     }
   },
   mutations:{
@@ -107,6 +112,7 @@ const store = new Vuex.Store({
   }
 })
 new Vue({
+   strict: false,
    el: '#app',
    router: router,
    store: store,

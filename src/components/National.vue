@@ -8,8 +8,9 @@
         <div class="pepole">
             <ul>
                 <li 
-                    v-for="item in owners" v-bind:key="item.index"
+                    v-for="item in owners" v-bind:key="item.id"
                     @click="handleFilterOwner(item)"
+                    
                 >
                      {{ item }}
                 </li>
@@ -40,14 +41,14 @@
         <div class="choose">
             <div class="pepole-show">
                 <ul>
-                    <li>
-                        <span>Cristiano Ronaldo</span>
-                        <div class="close">×</div>
+                    <li  
+                        v-for = "item in chosse" v-bind:key="item.id"
+                        
+                    >
+                        <span>{{ item }}</span>
+                        <div class="close" @click="choose=''">×</div>
                     </li>
-                    <li>
-                        <span>Cristiano Ronaldo</span>
-                        <div class="close">×</div>
-                    </li>
+                    
                 </ul>
             </div>
 
@@ -96,7 +97,7 @@
                     </div>
                     <div class="bot">
                         <span>{{item.price | number}} Eth</span>
-                        <button class="buy-bot">BUY</button>
+                        <button class="buy-bot" @click="handlebuyTeam(item)">BUY</button>
                     </div>
                 </li>
                 
@@ -105,9 +106,38 @@
             
         <!-- <nation-list></nation-list> -->
               
+         <div class="modle-overlay" 
+            :class="{show:model}" 
+            @click.stop="model=!model"
+            v-for="item in filteredAndOrderedList" :key="item.id"
+            v-if="item.name=== buyteam"
+        >
+                  <div class="popup" :class="{show:model}" @click.stop>
+                        <form action="">
+                              <div class="popup-top">
+                                    <h2>The National team you bet / injected is:</h2>
+                                    <span>{{item.name}}</span>
+                                    <div class="p-close" :class="{show:model}" v-on:click.stop="model=!model">×</div>
+                              </div>
+                              <div class="popup-mid">
+                                    <p>you can use {{item.price}}ETH to buy game1 from {{item.nick}}</p>
+                                    
+                                    <p>Next price:</p>
+                                    <span>{{item.nextPrice}}ETH</span>
+                              </div>
+                              <div class="popup-bot">
+                                    <div class="bet">betting: <span>{{item.price}}ETH</span></div>
+                                    <div class="payment"><input type="submit" value="payment"></div>
+                              </div>
+                        </form>
+                  </div>
+            </div>
         
-        
+    
     </div>
+
+    
+
 </template>
 
 
@@ -129,6 +159,7 @@
             owners(){
                 return this.$store.getters.owners;
             },
+            
             filteredAndOrderedList () {
                 let list = [...this.list];
                 //按地区过滤
@@ -156,20 +187,15 @@
                 isactive:false,
                 tabIndex:0,
                 bonus:'6,666.66',
-                localLists:[
-                    {text:'All',name:'all'},
-                    {text:'Europe',name:'europe'},
-                    {text:'S.America',name:'sa'},
-                    {text:'N,America',name:'na'},
-                    {text:'Africa',name:'africa'},
-                    {text:'Asia',name:'asia'}
-                    
-                ],
+                model:false,
                 teamLists:[],
+                chosse:[],
+                flag: false,
                 num: 1,
                 order:'',
                 filterContinent:'',
-                filterOwner:''
+                filterOwner:'',
+                buyteam:''
             }
         },
         mounted(){
@@ -197,14 +223,29 @@
             }
         },
         methods: {
+            
             handleFilterContinent (continent) {
                 this.filterContinent = continent;               
             },
             handleFilterOwner (owner) {
-                this.filterOwner = owner;               
+                this.filterOwner = owner; 
+               
+                
+                this.changeChosse(owner);                        
+            },
+            changeChosse(owner){             
+                this.chosse.push(owner);
+
             },
             changeOrder(e){
                 this.order = e.target.value;
+            },
+            ownerchosse(){
+            
+            },
+            handlebuyTeam(buy){
+                this.model=!this.model;
+                this.buyteam = buy.name;
             }
         }
     }

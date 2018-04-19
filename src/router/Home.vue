@@ -54,7 +54,7 @@ export default {
     // },
     mounted() {
         this.changeVisible();
-      
+      App.detectWallet(console.log)
     },
     methods: {
         changeTab (index, e) {

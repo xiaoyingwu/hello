@@ -8,7 +8,8 @@ export default new VueRouter({
     base: 'dist',
     routes: [
         {
-            path: '',
+            path:'',
+            // path: '/Worldcup/web/index.html',
             name:'Home',
             component: Home,
         }
