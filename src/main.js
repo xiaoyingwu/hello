@@ -5,7 +5,7 @@ import App from './App.vue'
 import Vuex from 'vuex';
 import router from './router/index'
 import axios from 'axios'
-import mask from './app.js'
+import './app.js'
 import './less/common.less'
 import team_data from '@/../static/json/team.json'
 

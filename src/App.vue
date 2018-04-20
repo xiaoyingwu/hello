@@ -11,9 +11,13 @@
                 </ul>
                 <ul class="nav-right">
                     <li><a href="">Register</a></li>
-                    <li><a href="">Sing in</a></li>           
+                    <li><a href="">{{name}}</a></li>           
                 </ul>
+                <div class="popup">
+                    <button>setNick</button>
+                </div>
             </nav>
+            <div class="tips" v-if="flag">{{message}}</div>
       </header>
        <div>
    
@@ -28,11 +32,43 @@
         name:'app',
         data(){
             return{
-
+                flag: false,
+                message:'',
+                name:'',
+                islive: false
             }
         },
         mounted(){
-            
-        }
+            App.detectWallet(msg=>{
+                if(msg == "noWeb3"){
+                    this.message = "请使用web3浏览器并安装metamask";
+                    this.flag = true;
+                }else if(msg == "unlockWalletFirst"){
+                    this.message = "需要解锁metamask";
+                    
+                }else if(msg == "unknowErr"){
+                    this.message = "未知错误";
+                    this.flag = true;
+                }else if(msg.search("wrongNetwork") !==-1){
+                    this.message = "网络错误";
+                    this.flag = true;
+                }else if(msg == "success"){
+                    
+                    this.flag = false;
+                }
+                console.log(msg)               
+            })   
+            App.getNick(cd=>{
+                if(cd == undefined){
+                    let address = App.getAddress();
+                    this.name = address.substring(address.length-6);
+                }
+
+            })
+
+        },
+        
+        
     }
 </script>
+
