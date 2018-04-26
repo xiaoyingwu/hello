@@ -16,16 +16,19 @@
         </section>
         <com-nation v-if="componentName === 'national'"></com-nation> 
         <com-golden v-if="componentName === 'golden'"></com-golden>
+        <com-guess v-if="componentName === 'competition'"></com-guess>
     </div>
 </template>
 <script>
 import national from '@/components/National'
 import golden from '@/components/Golden'
+import guess from '@/components/Guess'
 
 export default {
     components: {
         'com-nation': national,
-        'com-golden': golden
+        'com-golden': golden,
+        'com-guess': guess
     },
    
     data() {

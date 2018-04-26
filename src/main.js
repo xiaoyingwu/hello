@@ -8,6 +8,8 @@ import axios from 'axios'
 import './app.js'
 import './less/common.less'
 import team_data from '@/../static/json/team.json'
+import player_data from '@/../static/json/player.json'
+import match_data from '@/../static/json/match.json'
 
 Vue.config.productionTip = false
 Vue.use(Vuex);
@@ -61,13 +63,24 @@ function getFilterArray (array) {
 //   }
 //  return resname;
 // }
-
+function getOwnersArray (array) {
+  getFilterArray (array);
+  for(let i=0;i<6;i++){
+    res[i]=6;
+    res.join().split(",");
+    if(res[i]==""){
+      res[i]=null;
+    }
+  }
+  return res;
+}
 
 const store = new Vuex.Store({
   strict: false,
   state:{
-    teamList:[]
-   
+    teamList:[],
+    playerList:[],
+    matchList:[]
   },
   getters:{
     continents: state=>{
@@ -75,27 +88,32 @@ const store = new Vuex.Store({
       return getFilterArray (continents);
     },
     owners: state =>{
-      const owners = state.teamList.map(item =>item.nick)
-      // const owners = state.teamList.map(item => {
-      //   var rnick ={};
-      //   rnick[item.nick]=item.price;
-      //   return rnick;
-      // })
-    
-     
-      
-      return getFilterArray (owners);
-     
+      const owners = state.teamList.map(item =>item.nick);
+      var filterowners = getFilterArray (owners);    
+      return filterowners;
+    },
+    matchtime: state =>{
+      const matchtime = state.matchList.map(item =>item.matchTime);
+      return getFilterArray(matchtime);
     }
   },
   mutations:{
+    //Team list
     setTeamList(state,data){
       state.teamList = data;
+    },
+    //player list
+    setPlayerList(state,data){
+      state.playerList = data;
+    },
+    setMatchList(state,data){
+      state.matchList = data;
     }
+
   },
   actions:{
-    getTeamList(context){
-          
+    getTeamList(context){     
+       
         axios.get('http://10.10.1.149:8124/index', {
             params:{
                 action: 'TD'
@@ -104,10 +122,16 @@ const store = new Vuex.Store({
         .then(function (response) {                     
             for(var i=0; i< team_data.length;i++){
                 Object.assign(response.data.data[i],team_data[i]); 
-                context.commit('setTeamList',response.data.data)    
+                context.commit('setTeamList',response.data.data);    
             }          
         }) 
-      
+    
+    },
+    getPlayerList(context){
+      context.commit('setPlayerList',player_data); 
+    },
+    getMatchList(context){
+      context.commit('setMatchList',match_data)
     }
   }
 })

@@ -1,0 +1,197 @@
+[
+    {
+        "id": "1",
+        "name": "Messi",
+        "team": "13"
+    },
+    {
+        "id": "2",
+        "name": "Neymar",
+        "team": "17"
+    },
+    {
+        "id": "3",
+        "name": "Sahlawi",
+        "team": "4"
+    },
+    {
+        "id": "4",
+        "name": "Dzagoev",
+        "team": "1"
+    },
+    {
+        "id": "5",
+        "name": "C.Ronaldo",
+        "team": "5"
+    },
+    {
+        "id": "6",
+        "name": "Thomas M\u00fcller",
+        "team": "21"
+    },
+    {
+        "id": "7",
+        "name": "Griezmann",
+        "team": "9"
+    },
+    {
+        "id": "8",
+        "name": "Jesus",
+        "team": "17"
+    },
+    {
+        "id": "9",
+        "name": "Lewandowski",
+        "team": "29"
+    },
+    {
+        "id": "10",
+        "name": "Salah",
+        "team": "3"
+    },
+    {
+        "id": "11",
+        "name": "Kane",
+        "team": "26"
+    },
+    {
+        "id": "12",
+        "name": "Luis Suarez",
+        "team": "2"
+    },
+    {
+        "id": "13",
+        "name": "James Rodr\u00edguez",
+        "team": "30"
+    },
+    {
+        "id": "14",
+        "name": "Lukaku",
+        "team": "25"
+    },
+    {
+        "id": "15",
+        "name": "Higua\u00edn",
+        "team": "13"
+    },
+    {
+        "id": "16",
+        "name": "Sergio Ag\u00fcero",
+        "team": "13"
+    },
+    {
+        "id": "17",
+        "name": "Sergio Ramos",
+        "team": "6"
+    },
+    {
+        "id": "18",
+        "name": "Diego Costa",
+        "team": "6"
+    },
+    {
+        "id": "19",
+        "name": "Mandzukic",
+        "team": "14"
+    },
+    {
+        "id": "20",
+        "name": "Javier Hernandez",
+        "team": "22"
+    },
+    {
+        "id": "21",
+        "name": "Modric",
+        "team": "14"
+    },
+    {
+        "id": "22",
+        "name": "Heung-Min Son",
+        "team": "24"
+    },
+    {
+        "id": "23",
+        "name": "Keisuke Honda",
+        "team": "32"
+    },
+    {
+        "id": "24",
+        "name": "Mane",
+        "team": "31"
+    },
+    {
+        "id": "25",
+        "name": "Navas",
+        "team": "19"
+    },
+    {
+        "id": "26",
+        "name": "Azmoun",
+        "team": "7"
+    },
+    {
+        "id": "27",
+        "name": "Benatia",
+        "team": "8"
+    },
+    {
+        "id": "28",
+        "name": "Eriksen",
+        "team": "11"
+    },
+    {
+        "id": "29",
+        "name": "Tim Cahill",
+        "team": "12"
+    },
+    {
+        "id": "30",
+        "name": "Sigurdsson",
+        "team": "15"
+    },
+    {
+        "id": "31",
+        "name": "Mati\u0107",
+        "team": "20"
+    },
+    {
+        "id": "32",
+        "name": "Moses",
+        "team": "16"
+    },
+    {
+        "id": "33",
+        "name": "Farfan",
+        "team": "10"
+    },
+    {
+        "id": "34",
+        "name": "Shaqiri",
+        "team": "18"
+    },
+    {
+        "id": "35",
+        "name": "Abdennour",
+        "team": "27"
+    },
+    {
+        "id": "36",
+        "name": "Roman Torres",
+        "team": "28"
+    },
+    {
+        "id": "37",
+        "name": "Forsberg",
+        "team": "23"
+    },
+    {
+        "id": "38",
+        "name": "Hazard",
+        "team": "25"
+    },
+    {
+        "id": "39",
+        "name": "Neuer",
+        "team": "21"
+    }
+]

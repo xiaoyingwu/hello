@@ -9,8 +9,8 @@
             <ul>
                 <li 
                     v-for="item in owners" v-bind:key="item.id"
-                    @click="handleFilterOwner(item)"
-                    
+                    @click="handleFilterOwner(item)" 
+                    v-if="owners!=''"                   
                 >
                      {{ item }}
                 </li>
@@ -42,11 +42,11 @@
             <div class="pepole-show">
                 <ul>
                     <li  
-                        v-for = "item in chosse" v-bind:key="item.id"
                         
+                        v-for = "item in chosse" v-bind:key="item.id"                        
                     >
                         <span>{{ item }}</span>
-                        <div class="close" @click="choose=''">×</div>
+                        <div class="close" @click="closechosse(item)">×</div>
                     </li>
                     
                 </ul>
@@ -112,43 +112,41 @@
             v-for="item in filteredAndOrderedList" :key="item.id"
             v-if="item.name=== buyteam"
         >
-                  <div class="popup" :class="{show:model}" @click.stop>
-                        <form action="">
-                              <div class="popup-top">
-                                    <h2>The National team you bet / injected is:</h2>
-                                    <span>{{item.name}}</span>
-                                    <div class="p-close" :class="{show:model}" v-on:click.stop="model=!model">×</div>
-                              </div>
-                              <div class="popup-mid">
-                                    <p>you can use {{item.price}}ETH to buy game1 from {{item.nick}}</p>
-                                    
-                                    <p>Next price:</p>
-                                    <span>{{item.nextPrice}}ETH</span>
-                              </div>
-                              <div class="popup-bot">
-                                    <div class="bet">betting: <span>{{item.price}}ETH</span></div>
-                                    <div class="payment"><input type="submit" value="payment"></div>
-                              </div>
-                        </form>
+                  <div class="popup" :class="{show:model}" @click.stop="loadData">
+                        <div class="popup-top">
+                            <div class="reload" @click.stop><img src="../images/reload.jpg"></div>
+                            <img :src="'@/../static/team_pic/pic'+ item.id +'.png'">
+                            <span>{{item.name}}</span>
+                            <p>Owner: {{item.nick}}</p>
+                            <div class="p-close" @click.stop="model=!model"><img src="../images/p-close.png"></div>
+                        </div>
+                        <div class="popup-content">
+                            <p>You can buy the team name from the player's name by <span>{{item.price | number}} ETH</span></p>
+                            <p>The next person who buys this team needs a bid of <span>{{item.nextPrice | number}} ETH</span>. If
+                            someone buys you,you will get refunded the difference.</p>
+                            <p>You can bid higher than the current team price to ensurethat you get a
+                            purchase. If your bid exceeds the current price, you will get a refund.If 
+                            the price is higher than your bid, your transaction may fail.</p>
+                            <p>This information was updated <set-time>2 seconds</set-time> ago.</p>
+                            <p>Disclaimer: the team is a collection, and no guarantee that other players
+or others will buy this collection from you.</p>
+                        </div>
+                              
+                            <div class="popup-bot"><span>{{item.price | number}} Eth</span> <button class="buy-bot" @click="buyTeam(item)">BUY</button></div>                      
                   </div>
-            </div>
-        
-    
+            </div>    
     </div>
-
-    
-
 </template>
 
 
 <script>
     import '@/less/national.less'
     import axios from 'axios'
-
+    import settime from './Settime.vue'
     export default {
-        // components: {
-        // 'nation-list': nationlist,        
-        // },
+        components: {
+        'set-time': settime,        
+        },
         computed:{
             list(){
                 return this.$store.state.teamList;
@@ -165,10 +163,13 @@
                 //按地区过滤
                 if (this.filterContinent !== '') {
                     list = list.filter(item => item.continent === this.filterContinent);
+                    
+
                 }
                 //按球队拥有者过滤
                 if (this.filterOwner !== '') {
                     list = list.filter(item => item.nick === this.filterOwner);
+                    // list = list.map(item => item.nick);
                 }
                 //按价格排序
                 if (this.order !== ''){
@@ -195,11 +196,11 @@
                 order:'',
                 filterContinent:'',
                 filterOwner:'',
-                buyteam:''
+                buyteam:'',
+                
             }
         },
-        mounted(){
-                     
+        mounted(){                   
             axios.get('http://10.10.1.149:8124/index', {
                 params:{
                     action: 'TBP'
@@ -213,7 +214,7 @@
                      console.log('数据加载失败')
             }
             )
-            this.$store.dispatch('getTeamList');
+            this.loadData();
         },
         filters: {
             number(value) {
@@ -222,20 +223,30 @@
                 return realVal;
             }
         },
-        methods: {
-            
+        methods: {    
+            loadData(){
+                this.$store.dispatch('getTeamList');
+            },       
             handleFilterContinent (continent) {
                 this.filterContinent = continent;               
             },
             handleFilterOwner (owner) {
-                this.filterOwner = owner; 
-               
-                
-                this.changeChosse(owner);                        
-            },
-            changeChosse(owner){             
+                this.filterOwner=owner;  
                 this.chosse.push(owner);
-
+                
+            },                              
+            removeByValue(arr,val){
+                for(var i=0; i<arr.length; i++) {
+                    if(arr[i] == val) {
+                    arr.splice(i, 1);
+                    break;
+                    }
+                }
+            },
+            closechosse(owner){
+                const arr = this.chosse;
+                this.removeByValue(arr,owner);
+                
             },
             changeOrder(e){
                 this.order = e.target.value;
@@ -246,6 +257,14 @@
             handlebuyTeam(buy){
                 this.model=!this.model;
                 this.buyteam = buy.name;
+            },
+            buyTeam(item){ 
+                this.buyteam = item.id;              
+                this.model= false;        
+                App.buy(this.buyteam,cb=>{ 
+                    console.log(cb);
+                });
+                
             }
         }
     }

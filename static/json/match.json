@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1",
+        "level": "A\u7ec4",
+        "matchTime": "1528988400",
+        "team1": "Russia",
+        "team2": "Saudi Arabia",
+        "flag": "1",
+        "endTime": "1532650566",
+        "location": "Luzhniki Stadium<br>MOSCOW",
+        "pic": "1"
+    },
+    {
+        "id": "2",
+        "level": "A\u7ec4",
+        "matchTime": "1529064000",
+        "team1": "Uruguay",
+        "team2": "Egypt",
+        "flag": "0",
+        "endTime": "1532650577",
+        "location": "Ekaterinburg Arena<br>EKATERINBURG",
+        "pic": "0"
+    },
+    {
+        "id": "3",
+        "level": "A\u7ec4",
+        "matchTime": "1529074800",
+        "team1": "Morocco",
+        "team2": "IR Iran",
+        "flag": "0",
+        "endTime": "1532674706",
+        "location": "Saint Petersburg Stadium<br>ST. PETERSBURG",
+        "pic": "0"
+    },
+    {
+        "id": "3",
+        "level": "A\u7ec4",
+        "matchTime": "1529074800",
+        "team1": "IR Iran",
+        "team2": "Morocco",
+        "flag": "3",
+        "endTime": "1535613454",
+        "location": "Saint Petersburg Stadium<br>ST. PETERSBURG",
+        "pic": "0"
+    },
+    {
+        "id": "4",
+        "level": "A\u7ec4",
+        "matchTime": "1529085600",
+        "team1": "Portugal",
+        "team2": "Spain",
+        "flag": "0",
+        "endTime": "1529392688",
+        "location": "Fisht Stadium<br>SOCHI",
+        "pic": "1"
+    }
+]
