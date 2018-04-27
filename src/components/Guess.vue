@@ -11,6 +11,7 @@
                 <li>Run a Lottery</li>
             </ul>
         </div>
+       
         <div class="day-match" v-for="(item,index) in list" :key="item.index">
 
             <div class="time">{{item.matchTime |date}}</div>
@@ -54,15 +55,15 @@
                 </div>
                 <div class="popup-mid">                   
                         <ul>
-                            <li v-for="item in lists" :key="item.index" :class="{active:isactive}" @click="betvalue(item)">{{item.bet}}</li>
-                            <li><label><input type="number" name="amounts" placeholder="Other"></label></li>
+                            <li v-for="item in lists" :key="item.index" :class="{'active':item.bet===betting}" @click="betvalue(item)">{{item.bet}}</li>
+                            <li><label><input type="text" name="amounts" placeholder="Other" v-model="bettings"></label></li>
                         </ul>
                         <p>According to the amount of your bet, if you win the right guess, you can
 get<span>709.61577 ETH</span>  </p>
                                                  
                 </div>
                 <div class="popup-bot">
-                        <div class="bet">betting: <span>{{betting}}</span></div>
+                        <div class="bet">betting: <span v-if="bettings==''">{{betting}}</span><span v-if="bettings!==''">{{bettings}}</span></div>
                         <div class="payment">
                             <button class="buy-bot" @click="buyTeam(item)">payment</button>
                         </div>
@@ -101,6 +102,7 @@ get<span>709.61577 ETH</span>  </p>
 </style>
 
 <script>
+import isToday from 'date-fns/is_today'
 export default {
     data(){
         return{
@@ -117,7 +119,8 @@ export default {
 
             ],
             isactive: false,
-            betting: 0
+            betting: '500ETH',
+            bettings:''
             
         }  
     },
@@ -141,8 +144,7 @@ export default {
             console.log(list);
             let list = [...this.list];
             //按时间过滤
-            list = list.sort((a,b)=>a.matchTime - b.matchTime);
-            
+            list = list.sort((a,b)=>a.matchTime - b.matchTime);           
             list = list.filter(item=>this.date(item.matchTime)===this.time[2]);
             return list;
             console.log(list);
@@ -202,7 +204,7 @@ export default {
 
         },
         betvalue(item){
-            this.isactive = true;
+            
             this.betting = item.bet;
         }
     }

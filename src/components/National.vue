@@ -208,7 +208,8 @@ or others will buy this collection from you.</p>
             })
             .then(response => {
                  this.bonus = response.data.data;
-                 this.num=this.bonus.length;
+                
+                 this.num=(this.number(this.bonus,2).toString()).length;
          
             }, response => {
                      console.log('数据加载失败')
@@ -225,7 +226,13 @@ or others will buy this collection from you.</p>
             },
            
         },
-        methods: {    
+        methods: { 
+            number(value,n) {
+                var toFixedNum = Number(value).toFixed(n);
+                          
+                return toFixedNum;
+
+            },   
             loadData(){
                 this.$store.dispatch('getTeamList');
             },       
