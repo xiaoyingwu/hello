@@ -2,7 +2,7 @@
     <div class="national">
         <div class="nation-header">
             <div class="bonus">
-                <span :style="'width:'+58*num +'px;'">{{bonus}}</span><span>ETH</span>
+                <span :style="'width:'+58*num +'px;'">{{bonus | number(2)}}</span><span>ETH</span>
             </div>
         </div>        
         <div class="pepole">
@@ -96,7 +96,7 @@
                         </div>
                     </div>
                     <div class="bot">
-                        <span>{{item.price | number}} Eth</span>
+                        <span>{{item.price | number(5)}} Eth</span>
                         <button class="buy-bot" @click="handlebuyTeam(item)">BUY</button>
                     </div>
                 </li>
@@ -121,8 +121,8 @@
                             <div class="p-close" @click.stop="model=!model"><img src="../images/p-close.png"></div>
                         </div>
                         <div class="popup-content">
-                            <p>You can buy the team name from the player's name by <span>{{item.price | number}} ETH</span></p>
-                            <p>The next person who buys this team needs a bid of <span>{{item.nextPrice | number}} ETH</span>. If
+                            <p>You can buy the team name from the player's name by <span>{{item.price | number(5)}} ETH</span></p>
+                            <p>The next person who buys this team needs a bid of <span>{{item.nextPrice | number(5)}} ETH</span>. If
                             someone buys you,you will get refunded the difference.</p>
                             <p>You can bid higher than the current team price to ensurethat you get a
                             purchase. If your bid exceeds the current price, you will get a refund.If 
@@ -132,7 +132,7 @@
 or others will buy this collection from you.</p>
                         </div>
                               
-                            <div class="popup-bot"><span>{{item.price | number}} Eth</span> <button class="buy-bot" @click="buyTeam(item)">BUY</button></div>                      
+                            <div class="popup-bottom"><span>{{item.price | number(5)}} Eth</span> <button class="buy-bot" @click="buyTeam(item)">BUY</button></div>                      
                   </div>
             </div>    
     </div>
@@ -217,11 +217,13 @@ or others will buy this collection from you.</p>
             this.loadData();
         },
         filters: {
-            number(value) {
-                var toFixedNum = Number(value).toFixed(6);
-                var realVal = toFixedNum.substring(0, toFixedNum.toString().length - 1);
-                return realVal;
-            }
+            number(value,n) {
+                var toFixedNum = Number(value).toFixed(n);
+                          
+                return toFixedNum;
+
+            },
+           
         },
         methods: {    
             loadData(){

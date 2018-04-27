@@ -92,7 +92,7 @@
                     <p>Disclaimer: the team is a collection, and no guarantee that other players
 or others will buy this collection from you.</p>
                 </div>      
-                <div class="popup-bot"><span>0.05000 Eth</span> <button class="buy-bot" @click="buyTeam(item)">BUY</button></div>
+                <div class="popup-bottom"><span>0.05000 Eth</span> <button class="buy-bot" @click="buyTeam(item)">BUY</button></div>
                 
             </div>
         </div>

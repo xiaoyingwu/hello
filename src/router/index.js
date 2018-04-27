@@ -16,13 +16,13 @@ export default new VueRouter({
         },
         {
             path:'/faq',
-            // path: '/Worldcup/web/index.html',
+            // path: '/Worldcup/web/faq',
             name:'Faq',
             component: Faq,
         },
         {
             path:'/rules',
-            // path: '/Worldcup/web/index.html',
+            // path: '/Worldcup/web/rules',
             name:'Rules',
             component: Rules,
         }

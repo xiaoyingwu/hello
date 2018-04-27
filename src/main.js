@@ -74,6 +74,24 @@ function getOwnersArray (array) {
   }
   return res;
 }
+function date(val){
+  var d = new Date(val*1000);
+  var weekday=new Array(7);
+      weekday[0]="Sunday";
+      weekday[1]="Monday";
+      weekday[2]="Tuesday";
+      weekday[3]="Wednesday";
+      weekday[4]="Thursday";
+      weekday[5]="Friday";
+      weekday[6]="Saturday";
+  var mon=["Jan","Feb","Mar","Apr","May","June","Aug","Sep","Oct","Nove","Dece"]
+  var week = weekday[d.getDay()];
+  var m = mon[d.getMonth()];
+  var day = d.getDate();
+  var n = week + " " + day+ " " + m;
+  return n;           
+}
+
 
 const store = new Vuex.Store({
   strict: false,
@@ -93,9 +111,16 @@ const store = new Vuex.Store({
       return filterowners;
     },
     matchtime: state =>{
-      const matchtime = state.matchList.map(item =>item.matchTime);
-      return getFilterArray(matchtime);
-    }
+      let matchtime = state.matchList.map(item =>item.matchTime);
+      matchtime = matchtime.sort((a,b)=>a-b);
+            let emp = [];
+            for(let i=0;i<matchtime.length;i++){
+                emp.push(date(matchtime[i]));
+            }
+            
+      return getFilterArray(emp);
+    },
+
   },
   mutations:{
     //Team list

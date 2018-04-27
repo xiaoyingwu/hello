@@ -1,1 +1,322 @@
-[{"id":"1","name":"Russia","group":"A\u7ec4","rank":"66th","best":"Semi-finals","continent":"Europe","star":"Dzagoev"},{"id":"2","name":"Uruguay","group":"A\u7ec4","rank":"17th","best":"Champion","continent":"S.America","star":"Luis Suarez"},{"id":"3","name":"Egypt","group":"A\u7ec4","rank":"46th","best":"Group Matches","continent":"Africa","star":"Salah"},{"id":"4","name":"Saudi Arabia","group":"A\u7ec4","rank":"70th","best":"Group Matches","continent":"Asia","star":"Sahlawi"},{"id":"5","name":"Portugal","group":"B\u7ec4","rank":"4th","best":"Bronze Medalist","continent":"Europe","star":"C.Ronaldo"},{"id":"6","name":"Spain","group":"B\u7ec4","rank":"8th","best":"Champion","continent":"Europe","star":"Sergio Ramos"},{"id":"7","name":"IR Iran","group":"B\u7ec4","rank":"36th","best":"Group Matches","continent":"Asia","star":"Azmoun"},{"id":"8","name":"Morocco","group":"B\u7ec4","rank":"42th","best":"Round of 16","continent":"Africa","star":"Benatia"},{"id":"9","name":"France","group":"C\u7ec4","rank":"7th","best":"Champion","continent":"Europe","star":"Griezmann"},{"id":"10","name":"Peru","group":"C\u7ec4","rank":"11th","best":"Quarter-finals","continent":"S.America","star":"Farfan"},{"id":"11","name":"Denmark","group":"C\u7ec4","rank":"12th","best":"Quarter-finals","continent":"Europe","star":"Eriksen"},{"id":"12","name":"Australia","group":"C\u7ec4","rank":"40th","best":"Round of 16","continent":"Asia","star":"Tim Cahill"},{"id":"13","name":"Argentina","group":"D\u7ec4","rank":"5th","best":"Champion","continent":"S.America","star":"Messi"},{"id":"14","name":"Croatia","group":"D\u7ec4","rank":"18th","best":"Bronze Medalist","continent":"Europe","star":"Modric"},{"id":"15","name":"Iceland","group":"D\u7ec4","rank":"22th","best":"Group Matches","continent":"Europe","star":"Sigurdsson"},{"id":"16","name":"Nigeria","group":"D\u7ec4","rank":"47th","best":"Round of 16","continent":"Africa","star":"Moses"},{"id":"17","name":"Brazil","group":"E\u7ec4","rank":"2nd","best":"Champion","continent":"S.America","star":"Neymar"},{"id":"18","name":"Switzerland","group":"E\u7ec4","rank":"6th","best":"Quarter-finals","continent":"Europe","star":"Shaqiri"},{"id":"19","name":"Costa Rica","group":"E\u7ec4","rank":"25th","best":"Quarter-finals","continent":"N.America","star":"Navas"},{"id":"20","name":"Serbia","group":"E\u7ec4","rank":"35th","best":"Semi-finals","continent":"Europe","star":"Mati\u0107"},{"id":"21","name":"Germany","group":"F\u7ec4","rank":"1st","best":"Champion","continent":"Europe","star":"Neuer"},{"id":"22","name":"Mexico","group":"F\u7ec4","rank":"15th","best":"Quarter-finals","continent":"N.America","star":"Javier Hernandez"},{"id":"23","name":"Sweden","group":"F\u7ec4","rank":"23th","best":"Second Place","continent":"Europe","star":"Forsberg"},{"id":"24","name":"Korea Republic","group":"F\u7ec4","rank":"61th","best":"Semi-finals","continent":"Asia","star":"Heung-Min Son"},{"id":"25","name":"Belgium","group":"G\u7ec4","rank":"3rd","best":"Semi-finals","continent":"Europe","star":"Hazard"},{"id":"26","name":"England","group":"G\u7ec4","rank":"13th","best":"Champion","continent":"Europe","star":"Kane"},{"id":"27","name":"Tunisia","group":"G\u7ec4","rank":"14th","best":"Group Matches","continent":"Africa","star":"Abdennour"},{"id":"28","name":"Panama","group":"G\u7ec4","rank":"55th","best":"Group Matches","continent":"N.America","star":"Roman Torres"},{"id":"29","name":"Poland","group":"H\u7ec4","rank":"10th","best":"Bronze Medalist","continent":"Europe","star":"Lewandowski"},{"id":"30","name":"Colombia","group":"H\u7ec4","rank":"16th","best":"Quarter-finals","continent":"S.America","star":"James Rodr\u00edguez"},{"id":"31","name":"Senegal","group":"H\u7ec4","rank":"28th","best":"Quarter-finals","continent":"Africa","star":"Mane"},{"id":"32","name":"Japan","group":"H\u7ec4","rank":"60th","best":"Round of 16","continent":"Asia","star":"Keisuke Honda"}]
+[
+    {
+        "id": "1",
+        "name": "Russia",
+        "name2": "RUS",
+        "group": "A\u7ec4",
+        "rank": "66th",
+        "best": "Semi-finals",
+        "continent": "Europe",
+        "star": "Dzagoev"
+    },
+    {
+        "id": "2",
+        "name": "Uruguay",
+        "name2": "URU",
+        "group": "A\u7ec4",
+        "rank": "17th",
+        "best": "Champion",
+        "continent": "S.America",
+        "star": "Luis Suarez"
+    },
+    {
+        "id": "3",
+        "name": "Egypt",
+        "name2": "EGY",
+        "group": "A\u7ec4",
+        "rank": "46th",
+        "best": "Group Matches",
+        "continent": "Africa",
+        "star": "Salah"
+    },
+    {
+        "id": "4",
+        "name": "Saudi Arabia",
+        "name2": "KSA",
+        "group": "A\u7ec4",
+        "rank": "70th",
+        "best": "Group Matches",
+        "continent": "Asia",
+        "star": "Sahlawi"
+    },
+    {
+        "id": "5",
+        "name": "Portugal",
+        "name2": "POR",
+        "group": "B\u7ec4",
+        "rank": "4th",
+        "best": "Bronze Medalist",
+        "continent": "Europe",
+        "star": "C.Ronaldo"
+    },
+    {
+        "id": "6",
+        "name": "Spain",
+        "name2": "ESP",
+        "group": "B\u7ec4",
+        "rank": "8th",
+        "best": "Champion",
+        "continent": "Europe",
+        "star": "Sergio Ramos"
+    },
+    {
+        "id": "7",
+        "name": "IR Iran",
+        "name2": "IRN",
+        "group": "B\u7ec4",
+        "rank": "36th",
+        "best": "Group Matches",
+        "continent": "Asia",
+        "star": "Azmoun"
+    },
+    {
+        "id": "8",
+        "name": "Morocco",
+        "name2": "MAR",
+        "group": "B\u7ec4",
+        "rank": "42th",
+        "best": "Round of 16",
+        "continent": "Africa",
+        "star": "Benatia"
+    },
+    {
+        "id": "9",
+        "name": "France",
+        "name2": "FRA",
+        "group": "C\u7ec4",
+        "rank": "7th",
+        "best": "Champion",
+        "continent": "Europe",
+        "star": "Griezmann"
+    },
+    {
+        "id": "10",
+        "name": "Peru",
+        "name2": "PER",
+        "group": "C\u7ec4",
+        "rank": "11th",
+        "best": "Quarter-finals",
+        "continent": "S.America",
+        "star": "Farfan"
+    },
+    {
+        "id": "11",
+        "name": "Denmark",
+        "name2": "DEN",
+        "group": "C\u7ec4",
+        "rank": "12th",
+        "best": "Quarter-finals",
+        "continent": "Europe",
+        "star": "Eriksen"
+    },
+    {
+        "id": "12",
+        "name": "Australia",
+        "name2": "AUS",
+        "group": "C\u7ec4",
+        "rank": "40th",
+        "best": "Round of 16",
+        "continent": "Asia",
+        "star": "Tim Cahill"
+    },
+    {
+        "id": "13",
+        "name": "Argentina",
+        "name2": "ARG",
+        "group": "D\u7ec4",
+        "rank": "5th",
+        "best": "Champion",
+        "continent": "S.America",
+        "star": "Messi"
+    },
+    {
+        "id": "14",
+        "name": "Croatia",
+        "name2": "CRO",
+        "group": "D\u7ec4",
+        "rank": "18th",
+        "best": "Bronze Medalist",
+        "continent": "Europe",
+        "star": "Modric"
+    },
+    {
+        "id": "15",
+        "name": "Iceland",
+        "name2": "ISL",
+        "group": "D\u7ec4",
+        "rank": "22th",
+        "best": "Group Matches",
+        "continent": "Europe",
+        "star": "Sigurdsson"
+    },
+    {
+        "id": "16",
+        "name": "Nigeria",
+        "name2": "NGA",
+        "group": "D\u7ec4",
+        "rank": "47th",
+        "best": "Round of 16",
+        "continent": "Africa",
+        "star": "Moses"
+    },
+    {
+        "id": "17",
+        "name": "Brazil",
+        "name2": "BRA",
+        "group": "E\u7ec4",
+        "rank": "2nd",
+        "best": "Champion",
+        "continent": "S.America",
+        "star": "Neymar"
+    },
+    {
+        "id": "18",
+        "name": "Switzerland",
+        "name2": "SUI",
+        "group": "E\u7ec4",
+        "rank": "6th",
+        "best": "Quarter-finals",
+        "continent": "Europe",
+        "star": "Shaqiri"
+    },
+    {
+        "id": "19",
+        "name": "Costa Rica",
+        "name2": "CRC",
+        "group": "E\u7ec4",
+        "rank": "25th",
+        "best": "Quarter-finals",
+        "continent": "N.America",
+        "star": "Navas"
+    },
+    {
+        "id": "20",
+        "name": "Serbia",
+        "name2": "SRB",
+        "group": "E\u7ec4",
+        "rank": "35th",
+        "best": "Semi-finals",
+        "continent": "Europe",
+        "star": "Mati\u0107"
+    },
+    {
+        "id": "21",
+        "name": "Germany",
+        "name2": "GER",
+        "group": "F\u7ec4",
+        "rank": "1st",
+        "best": "Champion",
+        "continent": "Europe",
+        "star": "Neuer"
+    },
+    {
+        "id": "22",
+        "name": "Mexico",
+        "name2": "MEX",
+        "group": "F\u7ec4",
+        "rank": "15th",
+        "best": "Quarter-finals",
+        "continent": "N.America",
+        "star": "Javier Hernandez"
+    },
+    {
+        "id": "23",
+        "name": "Sweden",
+        "name2": "SWE",
+        "group": "F\u7ec4",
+        "rank": "23th",
+        "best": "Second Place",
+        "continent": "Europe",
+        "star": "Forsberg"
+    },
+    {
+        "id": "24",
+        "name": "Korea Republic",
+        "name2": "KOR",
+        "group": "F\u7ec4",
+        "rank": "61th",
+        "best": "Semi-finals",
+        "continent": "Asia",
+        "star": "Heung-Min Son"
+    },
+    {
+        "id": "25",
+        "name": "Belgium",
+        "name2": "BEL",
+        "group": "G\u7ec4",
+        "rank": "3rd",
+        "best": "Semi-finals",
+        "continent": "Europe",
+        "star": "Hazard"
+    },
+    {
+        "id": "26",
+        "name": "England",
+        "name2": "ENG",
+        "group": "G\u7ec4",
+        "rank": "13th",
+        "best": "Champion",
+        "continent": "Europe",
+        "star": "Kane"
+    },
+    {
+        "id": "27",
+        "name": "Tunisia",
+        "name2": "TUN",
+        "group": "G\u7ec4",
+        "rank": "14th",
+        "best": "Group Matches",
+        "continent": "Africa",
+        "star": "Abdennour"
+    },
+    {
+        "id": "28",
+        "name": "Panama",
+        "name2": "PAN",
+        "group": "G\u7ec4",
+        "rank": "55th",
+        "best": "Group Matches",
+        "continent": "N.America",
+        "star": "Roman Torres"
+    },
+    {
+        "id": "29",
+        "name": "Poland",
+        "name2": "POL",
+        "group": "H\u7ec4",
+        "rank": "10th",
+        "best": "Bronze Medalist",
+        "continent": "Europe",
+        "star": "Lewandowski"
+    },
+    {
+        "id": "30",
+        "name": "Colombia",
+        "name2": "COL",
+        "group": "H\u7ec4",
+        "rank": "16th",
+        "best": "Quarter-finals",
+        "continent": "S.America",
+        "star": "James Rodr\u00edguez"
+    },
+    {
+        "id": "31",
+        "name": "Senegal",
+        "name2": "SEN",
+        "group": "H\u7ec4",
+        "rank": "28th",
+        "best": "Quarter-finals",
+        "continent": "Africa",
+        "star": "Mane"
+    },
+    {
+        "id": "32",
+        "name": "Japan",
+        "name2": "JPN",
+        "group": "H\u7ec4",
+        "rank": "60th",
+        "best": "Round of 16",
+        "continent": "Asia",
+        "star": "Keisuke Honda"
+    }
+]
