@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 const Home = () => import('./Home')
 const Faq = () => import('./Faq')
 const Rules = () => import('./Rules')
+const Homepage = () => import('./Homepage')
 Vue.use(VueRouter)
 export default new VueRouter({
     mode: 'history',
@@ -10,6 +11,12 @@ export default new VueRouter({
     routes: [
         {
             path:'',
+            // path: '/Worldcup/web/index.html',
+            name:'Homepage',
+            component: Homepage,
+        },
+        {
+            path:'/home',
             // path: '/Worldcup/web/index.html',
             name:'Home',
             component: Home,

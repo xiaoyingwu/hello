@@ -76,15 +76,8 @@ function getOwnersArray (array) {
 }
 function date(val){
   var d = new Date(val*1000);
-  var weekday=new Array(7);
-      weekday[0]="Sunday";
-      weekday[1]="Monday";
-      weekday[2]="Tuesday";
-      weekday[3]="Wednesday";
-      weekday[4]="Thursday";
-      weekday[5]="Friday";
-      weekday[6]="Saturday";
-  var mon=["Jan","Feb","Mar","Apr","May","June","Aug","Sep","Oct","Nove","Dece"]
+  var weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var mon=["Jan","Feb","Mar","Apr","May","June","Aug","Sep","Oct","Nove","Dece"];
   var week = weekday[d.getDay()];
   var m = mon[d.getMonth()];
   var day = d.getDate();
@@ -104,6 +97,14 @@ const store = new Vuex.Store({
     continents: state=>{
       const continents = state.teamList.map(item =>item.continent)
       return getFilterArray (continents);
+    },
+    allteam: state=>{
+      const allteam = state.teamList.map(item =>item.name)
+      return allteam;
+    },
+    teamname: state=>{
+      const teamname = state.teamList.map(item =>item.name2)
+      return teamname;
     },
     owners: state =>{
       const owners = state.teamList.map(item =>item.nick);
@@ -156,7 +157,25 @@ const store = new Vuex.Store({
       context.commit('setPlayerList',player_data); 
     },
     getMatchList(context){
-      context.commit('setMatchList',match_data)
+      axios.get('http://10.10.1.149:8124/index', {
+            params:{
+                action: 'FCD'
+            }
+        })
+        .then(function (response) {   
+                       
+            for(var i=0; i< match_data.length;i++){
+              response.data.data.length=match_data.length;
+              if(response.data.data[i]==undefined){
+                response.data.data[i] = {};
+              }
+              Object.assign(response.data.data[i],match_data[i]); 
+              context.commit('setMatchList',response.data.data);  
+                                
+            } 
+                  
+        })
+    
     }
   }
 })

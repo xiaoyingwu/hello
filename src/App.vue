@@ -2,12 +2,12 @@
   <div id="app">
      <header>
             <nav>
-                <div class="log"><router-link to=""><img src="./images/logo.png"></router-link></div>
+                <div class="log"><router-link to="/Worldcup/web/index.html"><img src="./images/logo.png"></router-link></div>
                 <ul class="nav-left">
-                    <li><router-link to="">HOME</router-link></li>
-                    <li><router-link to="faq">FAQ</router-link></li>
-                    <li><router-link to="rules">RULES</router-link></li>
-                    <li><router-link to="Contact">Contact</router-link></li>
+                    <li><router-link to="/Worldcup/web/index.html">HOME</router-link></li>
+                    <li><router-link to="/Worldcup/web/faq">FAQ</router-link></li>
+                    <li><router-link to="/Worldcup/web/rules">RULES</router-link></li>
+                    <li><router-link to="/Worldcup/web/Contact">Contact</router-link></li>
                 </ul>
                 <ul class="nav-right">
                     <li><img :src="'@/../static/'+statues+'.png'"></li> 
